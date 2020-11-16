@@ -3,15 +3,15 @@ ptrace misconfiguration Local Privilege Escalation
 
 WARNING! this is a POC, the code is CRAP
 
-Injecting code via ptrace in shells with sudo executed
+Injecting code via ptrace (with same user) in shells with sudo authenticated
 
 Exploit Reqs:
-* ptrace enable to attach the processes of the attacker user
+* ptrace enable to attach the processes of the user
 * terminal with a sudo user group (attacker)
 * terminal with the same user & sudo authenticated (victim)
 * run xpk or ptrex (if GDB is installed is more safe run this: https://www.exploit-db.com/exploits/46989)
 
-my code is using ptrace (no GDB dep) 
+my code use ptrace (no GDB dep) 
 
 based from (GDB dep): https://www.exploit-db.com/exploits/46989
 
