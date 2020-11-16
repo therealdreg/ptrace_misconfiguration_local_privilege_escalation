@@ -143,3 +143,10 @@ bash-5.0# whoami
 root
 bash-5.0#
 ```
+## WORKING ON:
+
+* Parrot Home/Workstation: 4.6 
+* Parrot Security: 4.6 
+*	CentOS / RedHat: 7.6 
+*	Kali Linux: 2018.4 
+
