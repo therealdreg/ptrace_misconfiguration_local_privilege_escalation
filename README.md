@@ -172,3 +172,7 @@ bash-5.0#
 *	Kali Linux: 2018.4 
 * Debian GNU/Linux: 10 (buster)
 
+## TODO
+
+*  Research why GDB call system("") is more stable. my code needs the "python -c" thing for a safe execve injection in a bash shell (in other processes I can inject any execve(cmd) without problems, no idea why).
+
