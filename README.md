@@ -3,7 +3,7 @@ ptrace misconfiguration Local Privilege Escalation
 
 WARNING! this is a POC, the code is CRAP
 
-video demo on youtube: [https://youtu.be/3Qmy1Y8W7A8]
+video demo on youtube: https://youtu.be/3Qmy1Y8W7A8
 
 Injecting code via ptrace (with same user) in shells with sudo authenticated
 
