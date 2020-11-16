@@ -11,13 +11,14 @@ Exploit Reqs:
 * ptrace enable to attach the processes of the user
 * terminal with a sudo user group (attacker)
 * terminal with the same user & sudo authenticated (victim)
-* run xpk or ptrex (if GDB is installed is more safe run this: https://www.exploit-db.com/exploits/46989)
+* run xpk or ptrex 
 
-my code use ptrace (no GDB dep) 
-
-based from (GDB dep): https://www.exploit-db.com/exploits/46989
+WARNING: if GDB is installed in the machine is more safe run https://www.exploit-db.com/exploits/46989
 
 'ptrace_scope' misconfiguration Local Privilege Escalation by Marcelo Vazquez (s4vitar) & Victor Lasa (vowkin)
+
+my code is based in the s4vitar & vowkin POC and use ptrace (no GDB dep).
+
 
 ## xpk.c
 stdin hijack (using ptrace_do lib https://github.com/emptymonkey/ptrace_do): sudo -S cp /bin/bash /tmp + sudo -S chmod +s /tmp/bash + history -c 
