@@ -149,4 +149,5 @@ bash-5.0#
 * Parrot Security: 4.6 
 *	CentOS / RedHat: 7.6 
 *	Kali Linux: 2018.4 
+* Debian GNU/Linux: 10 (buster)
 
