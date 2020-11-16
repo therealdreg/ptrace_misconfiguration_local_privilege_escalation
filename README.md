@@ -1,0 +1,2 @@
+# ptrace_misconfiguration_local_privilege_escalation
+ptrace misconfiguration Local Privilege Escalation
