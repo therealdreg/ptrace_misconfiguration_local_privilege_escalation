@@ -126,7 +126,7 @@ root
 dreg@fr33project:~$ 
 ```
 
-open other terminal with the same user and execute ./xpk (the name of the exploit executable is important, dont change!)
+open other terminal with the same user and execute ./ptrex
 ```
 dreg@fr33project:~$ tty
 /dev/pts/7
