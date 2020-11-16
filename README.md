@@ -1,15 +1,21 @@
 # ptrace misconfiguration local privilege escalation
 ptrace misconfiguration Local Privilege Escalation
 
-using ptrace (no GDB dep) execve
-
 WARNING! this is a POC, the code is CRAP
+
+Injecting code via ptrace in shells with sudo executed
+
+Exploit Reqs:
+* ptrace enable to attach the processes of the attacker user
+* terminal with a sudo user group (attacker)
+* terminal with the same user & sudo authenticated (victim)
+* run xpk or ptrex (if GDB is installed is more safe run this: https://www.exploit-db.com/exploits/46989)
+
+my code is using ptrace (no GDB dep) 
 
 based from (GDB dep): https://www.exploit-db.com/exploits/46989
 
 'ptrace_scope' misconfiguration Local Privilege Escalation by Marcelo Vazquez (s4vitar) & Victor Lasa (vowkin)
-
-Same idea, with different flavours xpk & ptrex:
 
 ## xpk.c
 Local Privilege Escalation via stdin hijack (using ptrace_do lib https://github.com/emptymonkey/ptrace_do): sudo -S cp /bin/bash /tmp + sudo -S chmod +s /tmp/bash + history -c 
