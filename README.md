@@ -3,6 +3,8 @@ ptrace misconfiguration Local Privilege Escalation
 
 WARNING! this is a POC, the code is CRAP
 
+why this POC? why ptrace for this? just for fun. I know, I know you can get the sudo control in other different ways x)
+
 video demo on youtube: https://youtu.be/3Qmy1Y8W7A8
 
 Injecting code via ptrace (with same user) in shells with sudo authenticated
