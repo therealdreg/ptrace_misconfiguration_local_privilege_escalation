@@ -181,5 +181,4 @@ nobody loves me
 
 ## TODO
 
-*  Research why GDB call system("") is more stable and safe. ptrex needs the "python -c" thing for a safe execve injection **in a bash shell** (in other processes I can inject any execve(cmd) without problems, no idea why this happens).
 
