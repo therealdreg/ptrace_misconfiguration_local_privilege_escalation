@@ -48,7 +48,7 @@ drgs:
         mov rax, 59 ; __NR_execve
         syscall
 
-        mov rax, 1 ; exit
+        mov rax, 60 ; exit
         mov rbx, 0
         syscall
 
