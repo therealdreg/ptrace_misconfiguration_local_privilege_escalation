@@ -172,7 +172,7 @@ bash-5.0#
 
 If this fail, try the bind shell example
 
-### Example ptrex.c bind shell
+### Example ptrex.c bind shell netcat
 
 This example needs netcat installed in the machine
 
