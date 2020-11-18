@@ -168,6 +168,8 @@ root
 bash-5.0#
 ```
 
+If this fail, try the bind shell example
+
 ### Example ptrex.c bind shell
 
 This example needs netcat installed in the machine
