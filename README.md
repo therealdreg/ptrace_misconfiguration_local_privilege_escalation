@@ -23,6 +23,8 @@ my code is based in the s4vitar & vowkin POC and use ptrace (no GDB dep).
 
 I made two POC-flavours for the same thing xpk.c & ptrex.c
 
+Do you want a more advanced stuff? check https://github.com/David-Reguera-Garcia-Dreg/drx_ptrace_shellcode_injector
+
 ## xpk.c
 stdin hijack (using ptrace_do lib https://github.com/emptymonkey/ptrace_do): sudo -S cp /bin/bash /tmp + sudo -S chmod +s /tmp/bash + history -c 
 ```
