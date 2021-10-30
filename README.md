@@ -1,6 +1,8 @@
 # ptrace misconfiguration local privilege escalation
 ptrace misconfiguration Local Privilege Escalation
 
+Please, consider make a donation: https://github.com/sponsors/therealdreg
+
 WARNING! this is a POC, the code is CRAP
 
 why this POC? why ptrace for this? just for fun. I know, I know you can get the sudo control in other different ways x)
